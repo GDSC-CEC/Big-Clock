@@ -70,3 +70,8 @@ body {
 .sec-dark {
     color: #E6DDC4;
 }
+
+::selection{
+    color:blue;
+    background-color: transparent;
+}
