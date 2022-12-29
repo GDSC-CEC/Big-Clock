@@ -3,9 +3,7 @@
     padding: 0;
 }
 
-/* Light mode */
 body {
-    background-color: #f0e9d2;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +14,6 @@ body {
 
 .main-text {
     font-size: 8rem;
-    color: #181D31;
     font-weight: bold;
     font-family: "Chivo Mono";
 }
@@ -24,7 +21,6 @@ body {
 .sec-text {
     font-family: "Roboto Slab";
     font-size: 2rem;
-    color: #678983;
 }
 
 .sep {
@@ -39,7 +35,7 @@ body {
 }
 
 
-#header {
+.header {
     position: absolute;
     top: 1rem;
     /* visibility: hidden; */
@@ -47,21 +43,30 @@ body {
 
 
 
+/* Light mode */
+
+.back-light {
+    background-color: #f0e9d2;
+}
+
+.main-light {
+    color: #181D31;
+}
+
+.sec-light {
+    color: #678983;
+}
+
 /* Dark mode */
 
 .back-dark {
     background-color: #181D31;
 }
 
-.main-text-dark {
-    font-weight: bold;
-    font-size: 5rem;
-    font-family: "Roboto Slab";
+.main-dark {
     color: #f0e9d2;
 }
 
-.secondary-text-dark {
-    font-family: "Chivo Mono";
-    font-size: 3rem;
+.sec-dark {
     color: #E6DDC4;
 }
