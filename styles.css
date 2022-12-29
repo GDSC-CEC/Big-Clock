@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Light mode */
+body {
+    background-color: #f0e9d2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-text {
+    font-size: 8rem;
+    color: #181D31;
+    font-weight: bold;
+    font-family: "Chivo Mono";
+}
+
+.sec-text {
+    font-family: "Roboto Slab";
+    font-size: 2rem;
+    color: #678983;
+}
+
+.sep {
+    font-size: 3rem;
+}
+
+.main {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#header {
+    position: absolute;
+    top: 1rem;
+    /* visibility: hidden; */
+}
+
+
+
+/* Dark mode */
+
+.back-dark {
+    background-color: #181D31;
+}
+
+.main-text-dark {
+    font-weight: bold;
+    font-size: 5rem;
+    font-family: "Roboto Slab";
+    color: #f0e9d2;
+}
+
+.secondary-text-dark {
+    font-family: "Chivo Mono";
+    font-size: 3rem;
+    color: #E6DDC4;
+}
