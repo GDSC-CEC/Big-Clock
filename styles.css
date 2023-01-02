@@ -60,7 +60,7 @@ footer {
 
 .extras {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     max-width: 30vw;
     min-width: 20vw;
 }
@@ -113,7 +113,16 @@ i {
 
 @media (orientation: portrait) {
   
+    .main-text{
+        font-size: 23rem;
+    }
+    .sec-text{
+        font-size: 5rem;
+    }
     .main {
         flex-direction: column;
+    }
+    .sep{
+        visibility: hidden;
     }
 }
