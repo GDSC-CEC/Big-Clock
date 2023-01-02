@@ -8,36 +8,48 @@
     </head>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
 
-    <!-- Google fonts -->
+    <!-- CDN -->
     <link
         href="https://fonts.googleapis.com/css?family=Chivo+Mono:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
-
+    <script src="https://kit.fontawesome.com/8070ea12a9.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
-    <!-- Google fonts -->
+    <!-- CDN -->
 
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> -->
 
-    <body>
+    <body class="back-light">
         <!-- the heading area -->
-        <div class="header">
-            <div id="heading" class="sec-text">Big Clock</div>
-
-        </div>
+        <header>
+            <span id="heading" class="sec-text sec-light">Big Clock</span>
+            <span class="extras">
+                <i class="fa-solid fa-moon theme-toggle text sec-light"></i>
+                <i class="fa-solid fa-bars menu sec-light"></i> 
+                <i class="fa-solid fa-bars menu sec-light"></i> 
+            </span>
+        </header>
         <!-- the heading area -->
 
         <!-- the clock area -->
         <div id="main-area" class="main">
-            <span class="main-text" id="hour">HH</span>
-            <span class="sep sec-text"></span>
-            <span class="main-text" id="minute">MM</span>
-            <span class="sep sec-text"></span>
-            <span class="main-text" id="second">SS</span>
+            <span class="main-text main-light" id="hour">HH</span>
+            <span class="sep sec-light sec-text"></span>
+            <span class="main-text main-light" id="minute">MM</span>
+            <span class="sep sec-text sec-light"></span>
+            <span class="main-light main-text" id="second">SS</span>
         </div>
         <!-- the clock area -->
+
+        <!-- the footer area -->
+        <footer>
+        </footer>
+        <!-- the footer area -->
+        
+
     </body>
 
     <script src="bc_script.js"></script>

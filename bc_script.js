@@ -1,52 +1,53 @@
-function update_time() {
-    let date = new Date();
+var clock = [
+	document.querySelector("#hour"),
+	document.querySelector("#minute"),
+	document.querySelector("#second")
+];
 
-    $("#hour").text(() => {
-        hour = date.getHours();
-        return (hour < 10) ? `0${hour}` : `${hour}`
-    });
+var side_menu = document.querySelector(".menu");
 
-    $("#minute").text(() => {
-        min = date.getMinutes();
-        return (min < 10) ? `0${min}` : `${min}`
-    });
+function update_clock() {
+	var now = new Date();
+	var time = [now.getHours(), now.getMinutes(), now.getSeconds()];
 
-    $("#second").text(() => {
-        sec = date.getSeconds();
-        return (sec < 10) ? `0${sec}` : `${sec}`
-    });
+	for (let i = 0; i < clock.length; i++)
+		clock[i].innerText = time[i] < 10 ? `0${time[i]}` : time[i];
 }
 
-function set_seperator(str) {
-    $('.sep').text(str);
+function toggle_dark_theme() {
+	let light_backs = document.querySelectorAll(".back-light"),
+		light_text_sec = document.querySelectorAll(".sec-light"),
+		light_text = document.querySelectorAll(".main-light");
+
+	for (let i = 0; i < light_backs.length; i++)
+		light_backs[i].classList.toggle("back-dark");
+
+	for (let i = 0; i < light_text.length; i++)
+		light_text[i].classList.toggle("main-dark");
+
+	for (let i = 0; i < light_text_sec.length; i++)
+		light_text_sec[i].classList.toggle("sec-dark");
 }
 
-function dark_theme(d) {
-    // 1 for turn on dark theme
-    if (d == 1) {
-        $('body').removeClass('back-light');
-        $('body').addClass('back-dark');
-        $('.main-text').removeClass("main-light");
-        $('.main-text').addClass("main-dark");
-        $('.sec-text').removeClass("sec-light");
-        $('.sec-text').addClass("sec-dark");
-    }
-    
-    else if (d == 0) {
-        $('body').removeClass('back-dark');
-        $('body').addClass('back-light');
-        $('.main-text').addClass("main-light");
-        $('.main-text').removeClass("main-dark");
-        $('.sec-text').addClass("sec-light");
-        $('.sec-text').removeClass("sec-dark");
-    }
+function sep(sep) {
+	separators = document.querySelectorAll(".sep");
+	for (let i = 0; i < separators.length; i++)
+		separators[i].innerText = sep;
 
 }
 
-setInterval(update_time);
-
-set_seperator(" : ");
-
-dark_theme(1);
+setInterval(update_clock);
+sep(" : ");
 
 
+document.querySelector(".theme-toggle").
+	addEventListener("click", (event) => {
+		toggle_dark_theme();
+		document.querySelector(".theme-toggle").classList.toggle("fa-moon");
+		document.querySelector(".theme-toggle").classList.toggle("fa-sun");
+	})
+
+document.querySelector(".menu").
+	addEventListener("click", () => {
+		side_menu.classList.toggle("hidden");
+})

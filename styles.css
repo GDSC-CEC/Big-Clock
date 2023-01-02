@@ -5,6 +5,7 @@
 
 body {
     height: 100vh;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,35 +14,61 @@ body {
 
 
 .main-text {
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: bold;
     font-family: "Chivo Mono";
 }
 
 .sec-text {
     font-family: "Roboto Slab";
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 .sep {
+    margin: 2rem;
     font-size: 3rem;
 }
 
 .main {
-    width: 40rem;
+    min-width: 50px;
+    /* width: 45rem; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-
-.header {
+header {
+    width: 95vw;
     position: absolute;
     top: 1rem;
+    display: flex;
+    justify-content: space-between;
     /* visibility: hidden; */
 }
 
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+}
 
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+}
+
+.extras {
+    display: flex;
+    justify-content: space-between;
+    max-width: 30vw;
+    min-width: 20vw;
+}
+
+
+.text {
+    font-family: 'Roboto Slab';
+}
 
 /* Light mode */
 
@@ -57,21 +84,36 @@ body {
     color: #678983;
 }
 
+/* Light mode */
+
 /* Dark mode */
 
 .back-dark {
-    background-color: #181D31;
+    background-color: #180A0A;
 }
 
 .main-dark {
-    color: #f0e9d2;
+    color: #771a7c;
 }
 
 .sec-dark {
-    color: #E6DDC4;
+    color: #FB2576;
 }
 
-::selection{
-    color:blue;
+/* Dark mode */
+
+::selection {
+    color: rgb(70, 226, 31);
     background-color: transparent;
+}
+
+i {
+    font-size: 1rem;
+}
+
+@media (orientation: portrait) {
+  
+    .main {
+        flex-direction: column;
+    }
 }
