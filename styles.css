@@ -112,13 +112,7 @@ i {
 }
 
 @media (orientation: portrait) {
-  
-    .main-text{
-        font-size: 23rem;
-    }
-    .sec-text{
-        font-size: 5rem;
-    }
+
     .main {
         flex-direction: column;
     }
