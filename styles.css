@@ -1,3 +1,12 @@
+:root {
+    --light-bg: #fff;
+    --light-txt: #000;
+    --light-sec-txt: #678983;
+    --dark-bg: #000;
+    --dark-txt: #fff;
+    --dark-sec-txt: #FB2576;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -73,34 +82,34 @@ footer {
 /* Light mode */
 
 .back-light {
-    background-color: #f0e9d2;
+    background-color: var(--light-bg);
 }
 
 .main-light {
-    color: #181D31;
+    color: var(--light-txt);
 }
 
 .sec-light {
-    color: #678983;
+    color: var(--light-sec-txt);
 }
 
-/* Light mode */
+/* !Light mode */
 
 /* Dark mode */
 
 .back-dark {
-    background-color: #180A0A;
+    background-color: var(--dark-bg);
 }
 
 .main-dark {
-    color: #771a7c;
+    color: var(--dark-txt);
 }
 
 .sec-dark {
-    color: #FB2576;
+    color: var(--dark-sec-txt);
 }
 
-/* Dark mode */
+/* !Dark mode */
 
 ::selection {
     color: rgb(70, 226, 31);
@@ -116,7 +125,8 @@ i {
     .main {
         flex-direction: column;
     }
-    .sep{
+
+    .sep {
         visibility: hidden;
     }
 }

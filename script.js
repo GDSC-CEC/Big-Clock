@@ -1,11 +1,16 @@
-// import { update_clock, sep, } from './scripts/clock_script.js'
+import update_clock from "./scripts/clock_script.js";
+
 var CLOCK = [
     document.querySelector("#hour"),
     document.querySelector("#minute"),
     document.querySelector("#second")
-];
-var SIDE_MENU = document.querySelector(".menu");
+], SIDE_MENU = document.querySelector(".menu");
 
+function sep(sep) {
+    let separators = document.querySelectorAll(".sep");
+    for (let i = 0; i < separators.length; i++)
+        separators[i].innerText = sep;
+}
 
 function toggle_dark_theme() {
     let light_backs = document.querySelectorAll(".back-light"),
@@ -32,8 +37,11 @@ document.querySelector(".theme-toggle").
 
 
 // for the Menu Icon
-SIDE_MENU
-    .addEventListener(
-        "click",
-        () => { side_menu.classList.toggle("hidden"); }
-)
+// if (SIDE_MENU)
+//     SIDE_MENU.addEventListener(
+//         "click",
+//         () => { side_menu.classList.toggle("hidden"); }
+//     )
+
+setInterval(update_clock, 100, CLOCK)
+sep(":");
