@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Big-Clock</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Big-Clock</title>
+</head>
 
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 
-    <!-- CDN -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Chivo+Mono:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
-        rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/8070ea12a9.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900"
-        rel="stylesheet" />
-    <!-- CDN -->
+<!-- CDN -->
+<link href="https://fonts.googleapis.com/css?family=Chivo+Mono:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/8070ea12a9.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+<!-- CDN -->
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+<!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> -->
 
-    <body class="back-light">
-        <!-- the heading area -->
-        <header>
-            <span id="heading" class="sec-text sec-light">Big Clock</span>
-            <span class="extras">
-                <i class="fa-solid fa-moon theme-toggle text sec-light sec-text"></i>
-                <!-- <i class="fa-solid fa-bars menu sec-light"></i> 
-                <i class="fa-solid fa-bars menu sec-light"></i>  -->
-            </span>
-        </header>
-        <!-- the heading area -->
+<body class="back-light">
+  <!-- heading area -->
+  <header>
+    <span id="heading" class="sec-text sec-light">Big Clock</span>
+    <span class="header-menu">
+      <i class="fa-solid fa-moon text sec-light sec-text theme-toggle"></i>
+      <i class="fa-solid fa-ellipsis-vertical text sec-light sec-text menu"></i>
+    </span>
+  </header>
+  <!-- heading ends -->
 
-        <!-- the clock area -->
-        <div id="main-area" class="main">
-            <span class="main-text main-light" id="hour">HH</span>
-            <span class="sep sec-light sec-text"></span>
-            <span class="main-text main-light" id="minute">MM</span>
-            <span class="sep sec-text sec-light"></span>
-            <span class="main-light main-text" id="second">SS</span>
-        </div>
-        <!-- the clock area -->
+  <!-- clock area -->
+  <div id="main-area" class="main">
+    <span class="main-text main-light" id="hour">HH</span>
+    <span class="sep sec-light sec-text"></span>
+    <span class="main-text main-light" id="minute">MM</span>
+    <span class="sep sec-text sec-light"></span>
+    <span class="main-light main-text" id="second">SS</span>
+  </div>
+  <!-- clock ends-->
 
-        <!-- the footer area -->
-        <footer>
-        </footer>
-        <!-- the footer area -->
-        
+  <!-- the footer area -->
+  <footer>
+    <!-- mode -->
+    <div class="mode">
+    </div>
+  </footer>
+  <!-- the footer area -->
 
-    </body>
+  <div class="menu-list hidden text sec-light">
+    <div class="menu-items">
+      <div class="menu-label">Theme</div>
+      <div class="menu-value"><%= THEME %></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-label">Show Date</div>
+      <div class="menu-value"><%= DATE %></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-label">Time Zone</div>
+      <div class="menu-value"><%= TZ %></div>
+    </div>
+  </div>
 
-    <script type="module" src="script.js"></script>
+</body>
 
+<script type="module" src="script.js"></script>
 </html>

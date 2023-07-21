@@ -5,11 +5,17 @@
     --dark-bg: #000;
     --dark-txt: #fff;
     --dark-sec-txt: #FB2576;
+    --main-font: 'Roboto Slab';
+    --secondary-font: 'Chivo Mono';
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 body {
@@ -21,20 +27,19 @@ body {
     justify-content: center;
 }
 
-
 .main-text {
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: bold;
-    font-family: "Chivo Mono";
+    font-family: var(--secondary-font);
 }
 
 .sec-text {
-    font-family: "Roboto Slab";
+    font-family: var(--main-font);
     font-size: 2.25rem;
 }
 
 .sep {
-    margin: 2rem;
+    margin: 1.5rem;
     font-size: 3rem;
 }
 
@@ -45,6 +50,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
 }
 
 header {
@@ -67,16 +73,40 @@ footer {
     border: none;
 }
 
-.extras {
+.header-menu {
     display: flex;
     justify-content: flex-end;
     max-width: 30vw;
     min-width: 20vw;
+    align-items: center;
 }
 
+.header-menu i {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-list {
+    position: absolute;
+    top: 60px;
+    width: 15%;
+    right: 40px;
+    border: solid 1px;
+    padding: 10px;
+}
+
+.minimize {
+    position: absolute;
+}
 
 .text {
-    font-family: 'Roboto Slab';
+    font-family: var(--main-font);
 }
 
 /* Light mode */
@@ -87,10 +117,12 @@ footer {
 
 .main-light {
     color: var(--light-txt);
+    border-color: var(--light-txt);
 }
 
 .sec-light {
     color: var(--light-sec-txt);
+    border-color: var(--light-sec-txt);
 }
 
 /* !Light mode */
@@ -102,10 +134,12 @@ footer {
 }
 
 .main-dark {
+    border-color: var(--dark-txt);
     color: var(--dark-txt);
 }
 
 .sec-dark {
+    border-color: var(--dark-sec-txt);
     color: var(--dark-sec-txt);
 }
 
@@ -128,5 +162,21 @@ i {
 
     .sep {
         visibility: hidden;
+    }
+
+    .main-text {
+        font-size: 26rem;
+        font-weight: bold;
+        font-family: var(--secondary-font);
+    }
+
+    .sec-text {
+        font-family: var(--main-font);
+        font-size: 4rem;
+    }
+
+    .header-menu i {
+        font-size: 2.3rem;
+        margin:0 20px;
     }
 }
