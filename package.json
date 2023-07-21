@@ -1,0 +1,17 @@
+{
+  "name": "big-clock",
+  "version": "1.0.0",
+  "description": "A simple clock.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "keywords": [
+    "Clock"
+  ],
+  "author": "Vipul Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
