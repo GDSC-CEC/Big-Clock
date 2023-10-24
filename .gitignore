@@ -3,3 +3,4 @@
 .idea/
 *test*
 color-config.json
+node_modules/
