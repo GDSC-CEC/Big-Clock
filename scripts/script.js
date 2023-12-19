@@ -1,3 +1,5 @@
+//script.js
+
 function sep(sep) {
     const separators = document.querySelectorAll(".sep");
     for (let i = 0; i < separators.length; i++)
