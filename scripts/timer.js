@@ -1,3 +1,5 @@
+timer.js
+
 const CLOCK = [
     document.querySelector("#hour"),
     document.querySelector("#minute"),
